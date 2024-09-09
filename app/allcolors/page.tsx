@@ -31,7 +31,9 @@ export default function Home() {
           setIsLoading(false);
           return;
         }
-        const res = await fetch("http://192.168.1.190:4000/api/colors");
+        const res = await fetch(
+          "https://sigmafi-tech.website/ral-classic/api/colors"
+        );
         const data = await res.json();
         setColors(data);
         localStorage.setItem("colors", JSON.stringify(data));

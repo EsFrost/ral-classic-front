@@ -39,13 +39,16 @@ export default function Home() {
           setIsLoading(false);
           return;
         }
-        const res = await fetch("http://192.168.1.190:4000/api/colors", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          mode: "cors",
-        });
+        const res = await fetch(
+          "https://sigmafi-tech.website/ral-classic/api/colors",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            mode: "cors",
+          }
+        );
 
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
